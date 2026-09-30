@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"ccontent="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="crud.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2 class="logo">
+                Student Management
+            </h2>
+            <div id="navButtons"></div>
+        </div>
+    </nav>
+
+    <main class="main-container">
+
+        <div id="status"></div>
+
+        <section id="studentsPage">
+            <div class="page-header">
+                <div>
+                    <h1>
+                        Student Records
+                    </h1>
+                    <p>
+                        View and manage student records.
+                    </p>
+                </div>
+                <div id="addButtonContainer"></div>
+
+            </div>
+
+            <div id="loading">
+                Loading student records...
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Course</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTable">
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <section id="formPage" class="hidden">
+            <div class="form-card">
+                <h1 id="formTitle">
+                    Add Student
+                </h1>
+                <p>
+                    Enter the student's information below.
+                </p>
+                <form id="studentForm">
+                    <input type="hidden" id="studentId">
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Student Name
+                        </label>
+                        <input type="text" id="name" placeholder="Enter student name" required>
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input type="email" id="email" placeholder="Enter email address" required>
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="course">
+                            Course
+                        </label>
+
+                        <input type="text" id="course" placeholder="Enter course" required>
+                    </div>
+
+                    <div
+                        id="formButtons"
+                        class="form-buttons"
+                    ></div>
+
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="crud.js"></script>
+
+</body>
+
+</html>
+
